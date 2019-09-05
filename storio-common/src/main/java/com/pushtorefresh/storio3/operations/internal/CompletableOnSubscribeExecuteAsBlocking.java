@@ -28,7 +28,7 @@ public final class CompletableOnSubscribeExecuteAsBlocking implements Completabl
             preparedOperation.executeAsBlocking();
             emitter.onComplete();
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

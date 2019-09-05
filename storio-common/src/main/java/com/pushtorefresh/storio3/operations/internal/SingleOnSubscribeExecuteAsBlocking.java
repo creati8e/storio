@@ -28,7 +28,7 @@ public final class SingleOnSubscribeExecuteAsBlocking<Result, WrappedResult, Dat
             final Result value = preparedOperation.executeAsBlocking();
             emitter.onSuccess(value);
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

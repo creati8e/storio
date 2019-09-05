@@ -30,7 +30,7 @@ public final class FlowableOnSubscribeExecuteAsBlockingOptional<Result, Data> im
             emitter.onNext(Optional.of(value));
             emitter.onComplete();
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

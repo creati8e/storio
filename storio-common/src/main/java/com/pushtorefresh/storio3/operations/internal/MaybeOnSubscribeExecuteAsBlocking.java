@@ -32,7 +32,7 @@ public final class MaybeOnSubscribeExecuteAsBlocking<Result, WrappedResult, Data
                 emitter.onComplete();
             }
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

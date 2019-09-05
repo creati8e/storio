@@ -29,7 +29,7 @@ public final class SingleOnSubscribeExecuteAsBlockingOptional<Result, Data> impl
             final Result value = preparedOperation.executeAsBlocking();
             emitter.onSuccess(Optional.of(value));
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

@@ -28,7 +28,7 @@ public final class FlowableOnSubscribeExecuteAsBlocking<Result, WrappedResult, D
             emitter.onNext(preparedOperation.executeAsBlocking());
             emitter.onComplete();
         } catch (Exception e) {
-            emitter.onError(e);
+            emitter.tryOnError(e);
         }
     }
 }

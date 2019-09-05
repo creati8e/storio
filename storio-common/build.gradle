@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'checkstyle'
+apply from: '../jitpackpublishing.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
